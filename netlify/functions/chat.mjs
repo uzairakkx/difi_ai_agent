@@ -18,7 +18,7 @@ export default async (req) => {
   if (!apiKey) {
     return json(500, { error: "Server is missing DIFY_API_KEY. Add it in Netlify environment variables and redeploy." });
   }
-  const baseUrl = (process.env.DIFY_BASE_URL || "https://dify.ai").replace(/\/+$/, "");
+  const baseUrl = (process.env.DIFY_BASE_URL || "https://api.dify.ai/v1").replace(/\/+$/, "");
 
   let payload;
   try {
